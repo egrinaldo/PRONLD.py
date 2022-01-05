@@ -1,24 +1,34 @@
 nome = str(input("Informe Seu Nome: "))
 cpf = float(input("Informe seu CPF: "))
-vl_pago= 'sim'
 total = 0
-while (vl_pago != 'nao'):
-    prod = float(input('Insira o valor do Produto:  (Para encerrar a compra Digite 0) '))
+fim = True
+
+
+while True:
+    prod = float(input('\nInsira o valor do Produto:  (Para encerrar a compra Digite 0) \n'))
     if (prod == 0):
-        vl_pago = 'nao'
+        break
+        
+        
     else:
         total = total + (prod)
-        print ("Total a Ser PAGO: " ,total)
-        if total < 200: 
-            print ("Obrigado Por Comprar Conosco")
-            print ("Valor do Frete: R$ 19.90")
-            print ("Total a ser Pago: " , total + 19.90)
+        
+        if total < 200 : 
+        
+           print ("\nFrete Grátis em Compras Acima de R$ 200 \n")
+           print ('Valor do frete R$ 19,90')
+           print (nome)
+           print (cpf)
+           print ("Valor Total do Carrinho: " , total + 19.90)
         else:
             total > 200
-            print ("Obrigado Por Comprar Conosco")
-            print ("Você Ganhou Frete Grátis")
-            print ("Total a ser Pago: " , total)
-print (nome)
-print (cpf)
-print ("Total a ser Pago: " ,total)
-print ("Volte Sempre!")
+            print ("\nVocê Ganhou Frete Grátis !!!\n")
+            print (nome)
+            print (cpf)
+            print ("Valor Total do Carrinho: " , total)
+            
+print ("\nObrigado Por Comprar Conosco!\n")
+        
+    
+            
+            

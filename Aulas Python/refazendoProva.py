@@ -1,24 +1,31 @@
-from random import randrange
-nome = ''
-compra = ''
-cpf = []
-clientes = []
-telefone = []
-finalizar = 0
+nome = str(input("Informe Seu Nome: "))
+cpf = float(input("Informe seu CPF: "))
 total = 0
+fim = True
 
-while compra != 'fim':
-    compra = float(input('Informe o valor do produto: ' 'Para Finalizar Digite 0: '))
-    
-    if (compra == 0):
-        finalizar != 'nao'
-        nome = input('Informe o nome do cliente: ')
-        telefone = int(input('Insira o Número de Telefone: '))
-        cpf = int(input('Insira o CPF: '))
-        if compra > 200:
-           print ("\nObrigado Por Comprar Conosco\n")
-           print ("Você Ganhou Frete Grátis")
-           print ("Total a ser Pago: " , total)
+
+while True:
+    prod = float(input('\nInsira o valor do Produto:  (Para encerrar a compra Digite 0) \n'))
+    if (prod == 0):
+        break
+        
+        
     else:
-        total = total + (compra)
+        total = total + (prod)
+        
+        if total < 200 : 
+        
+           print ("\nFrete Grátis em Compras Acima de R$ 200 \n")
+           print ('Valor do frete R$ 19,90')
+           print (nome)
+           print (cpf)
+           print ("Valor Total do Carrinho: " , total + 19.90)
+        else:
+            total > 200
+            print ("\nVocê Ganhou Frete Grátis !!!\n")
+            print (nome)
+            print (cpf)
+            print ("Valor Total do Carrinho: " , total)
+            
+print ("\nObrigado Por Comprar Conosco!\n")
 

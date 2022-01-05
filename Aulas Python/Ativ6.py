@@ -1,10 +1,9 @@
-import datetime = datetime.range()
-def passado_view(date):
-    d = datetime
-    for dat in range (date , 0 , -1 ):
-        d = dat - 1
-    return dat
-date = int(input"Insira a data")
-print ("Os dias passados foram : ")
-    
-    
+def seculo_ano(sec):
+    ano = 0
+    if sec == ano:
+        return sec
+        
+   
+ano = int(input('\nInsira o ano: \n' ))
+ano = ano / (100 + 1)
+print ("\nSeculo: \n" ,round(ano)+1)
